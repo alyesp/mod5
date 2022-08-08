@@ -3,7 +3,7 @@
 For this activity, we were asked to use started code and develope a work day scheduler that indicates the past, present and future. 
 
 Github Repo: https://github.com/alyesp/mod5
-Deployed Link:
+Deployed Link: https://alyesp.github.io/mod5/
 
 # Acceptance Criteria: 
 <li> WHEN I open the planner
