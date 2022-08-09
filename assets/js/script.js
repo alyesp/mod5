@@ -11,31 +11,32 @@ $(document).ready(function () {
     }); 
 }) 
 //local storage for the events user puts in
-$("#hour8.description").val(localStorage.getItem("hour8"));
-$("#hour9.description").val(localStorage.getItem("hour9"));
-$("#hour10.description").val(localStorage.getItem("hour10"));
-$("#hour11.description").val(localStorage.getItem("hour11"));
-$("#hour12.description").val(localStorage.getItem("hour12"));
-$("#hour1.description").val(localStorage.getItem("hour1"));
-$("#hour2.description").val(localStorage.getItem("hour2"));
-$("#hour3.description").val(localStorage.getItem("hour3"));
-$("#hour4.description").val(localStorage.getItem("hour4"));
-$("#hour5.description").val(localStorage.getItem("hour5"));
+$("#hour8 .description").val(localStorage.getItem("hour8"));
+$("#hour9 .description").val(localStorage.getItem("hour9"));
+$("#hour10 .description").val(localStorage.getItem("hour10"));
+$("#hour11 .description").val(localStorage.getItem("hour11"));
+$("#hour12 .description").val(localStorage.getItem("hour12"));
+$("#hour13 .description").val(localStorage.getItem("hour13"));
+$("#hour14 .description").val(localStorage.getItem("hour14"));
+$("#hour15 .description").val(localStorage.getItem("hour15"));
+$("#hour16 .description").val(localStorage.getItem("hour16"));
+$("#hour17 .description").val(localStorage.getItem("hour17"));
 
-function timeInterval() {
-    var currentHr = moment().hour();
+function hourTracker() {
+    var currentHr = moment().hour(); 
 
-    $(".time-block").each(function() {
-        var timeBlock = parseInt($(this).attr("id").split("hour")[1]);
-        console.log(timeBlock, currentHr)
+    // loop over time blocks
+    $(".time-block").each(function () {
+        var blockHour = parseInt($(this).attr("id").split("hour")[1]);
+        console.log( blockHour, currentHr)
 
-        //colors will change with CSS once the time is incremented appropriately
-        if (timeBlock < currentHr) {
+        //Block hours
+        if (blockHour < currentHr) {
             $(this).addClass("past");
             $(this).removeClass("future");
             $(this).removeClass("present");
         }
-        else if (timeBlock === currentHour) {
+        else if (blockHour === currentHr) {
             $(this).removeClass("past");
             $(this).addClass("present");
             $(this).removeClass("future");
@@ -44,6 +45,7 @@ function timeInterval() {
             $(this).removeClass("present");
             $(this).removeClass("past");
             $(this).addClass("future");
-        } 
+        }
     })
 }
+hourTracker();

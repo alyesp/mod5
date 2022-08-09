@@ -7,7 +7,7 @@ body {
 
 textarea{
   background: transparent;
-  background-color: rgb(243, 117, 138);
+  /* background-color: rgb(243, 117, 138); */
   border: none;
   resize: none;
   color: #aef1ac;
@@ -45,17 +45,17 @@ textarea{
 }
 
 .past {
-  background-color: #979595;
+  background-color: #4e4b4b;
   color: white;
 }
 
 .present {
-  background-color: #fd9b95;
+  background-color: #95e5fd;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #dddb77;
   color: white;
 }
 
